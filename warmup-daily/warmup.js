@@ -40,7 +40,10 @@ function reduce(arr, callback){
   let val = 0;
   let idx = 0;
   for(let i=0; i<arr.length; i++){
-
+    acc=arr[i];
+    val=arr[i+1];
+    idx = i;
+    callback(acc, val, idx);
   }
 }
 
