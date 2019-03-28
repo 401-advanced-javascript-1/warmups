@@ -58,16 +58,14 @@ const stuff = {
   cars: ['Toyota','Mazda']
 }
 
-let state = {};
+let state = { people: people, stuff: stuff};
 
 //newPeople
 let newPeople = ['Odie', ...people, 'Garfield'];
 
 //newStuff
-let {cars} = stuff;
-cars.push('mazda');
-stuff.cars = cars;
-const newStuff = stuff;
+let cars = stuff.cars;
+newStuff = {...stuff, cars: [...cars, 'PT Cruiser']}
 
-//newStateå
-let newState = {};
+//newState
+let newState = { people:  };
