@@ -24,5 +24,4 @@ async function fetchPeopleWithAsync() {
   return await fetchPeopleWithPromises();
 };
 
-// fetchPeopleWithAsync();
 fetchPeopleWithPromises();
