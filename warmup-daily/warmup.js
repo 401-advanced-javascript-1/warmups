@@ -68,4 +68,5 @@ let cars = stuff.cars;
 newStuff = {...stuff, cars: [...cars, 'PT Cruiser']}
 
 //newState
-let newState = { people:  };
+let newState = {};
+newState = [state.people, state.stuff];
