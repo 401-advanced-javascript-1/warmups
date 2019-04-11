@@ -1,7 +1,7 @@
 'use strict';
 
 const superagent = require('superagent');
-const arrayOfPromises = [];
+const promises = [];
 
 function fetchPeopleWithPromises() {
   const url = 'https://swapi.co/api/people/';
@@ -12,9 +12,8 @@ function fetchPeopleWithPromises() {
       urls.forEach(url => {
         arrayOfPromises.push(Promise.resolve(superagent.get(url)));
       });
-      Promise.all(arrayOfPromises).then(response => {
+      Promise.all(promises).then(response => {
         const names = response.map(response=>response.body.name);
-        console.log(names);
       });
     })
     .catch(err => console.log(err));

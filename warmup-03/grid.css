@@ -1,0 +1,42 @@
+/* html{
+  /* height:100%; */
+} */
+
+body{
+  border: pink 6px solid;
+  min-height: 100vh;
+}
+
+#wrapper{
+  display: grid;
+  grid-template-rows: 100px auto 100px;
+  text-align: center;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  border: solid red 4px;
+}
+
+#header{
+  border: solid black 4px;
+  background-color: blue;
+}
+
+#left{
+  background-color: skyblue;
+}
+
+#content{
+  background-color: orange;
+}
+
+#right{
+  background-color: pink;
+}
+
+#footer{
+  background-color: green;
+  border: solid black 4px;
+}
