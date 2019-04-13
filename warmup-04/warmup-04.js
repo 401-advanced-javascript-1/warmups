@@ -13,7 +13,7 @@ function fetchPeopleWithPromises() {
         arrayOfPromises.push(Promise.resolve(superagent.get(url)));
       });
       Promise.all(promises).then(response => {
-        const names = response.map(response=>response.body.name);
+        return response.map(response=>response.body.name);
       });
     })
     .catch(err => console.log(err));
@@ -24,3 +24,4 @@ async function fetchPeopleWithAsync() {
 }
 
 fetchPeopleWithPromises();
+fetchPeopleWithAsynch();
